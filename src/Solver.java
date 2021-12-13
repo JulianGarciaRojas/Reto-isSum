@@ -1,11 +1,12 @@
 public class Solver {
     public boolean isSum(String[] matriz){
         int size = matriz.length;
-        int[][] matrizInt = new int[size][size];
+        int[][] matrizInt = new int[size][size]; // Matriz entera auxiliar para facilitar procesos de suma y comparación de los elementos
         int j = 0;
-        int sumaH, sumaV, sumaO, casos = 0;
+        int sumaH, sumaV, sumaO, casos = 0; // Variables comodín para almacenar sumas (Horizonales, Verticales y Oblicuas) y cantidad de casos satisfactorios encontrados
 
         if(size >= 4){
+            // Creando matriz entera auxiliar
             for (String x: matriz) {
                 String[] elements = x.split(",");
                 if(elements.length == size){
@@ -61,6 +62,7 @@ public class Solver {
             return false;
         }
 
+        // Retorno de la respuesta correpondiente a los requerimientos del ejercicio
         if (casos >= 3){
             return true;
         } else {
